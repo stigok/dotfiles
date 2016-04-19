@@ -1,0 +1,37 @@
+#
+# User alias
+#
+
+# General
+alias ls='ls --color '
+alias l='ls -al '
+alias tree='tree -C --dirsfirst '
+alias pgrep='pgrep -i '
+
+# Write docs
+alias docup='atom ~/docs/arch-install.md'
+
+# Git
+alias g='git status '
+alias gap='git add -p '
+alias gc='git commit -m '
+alias gca='git commit --amend --no-edit'
+
+# Apps
+alias atom='atom-beta '
+alias atomm='atom-beta --new-window $(pwd) '
+alias apm='apm-beta '
+alias printscreen='escrotum -s ~/pictures/screens/%Y-%m-%d-%H%M%S.png'
+
+# Games
+alias diablo3='setarch i386 -3 wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Diablo\ III/Diablo\ III.exe'
+
+# SSH
+alias connect-sshow-21='sudo ssh sshow-21.stigok.com -i /root/keys/sshow-21 -l pi'
+
+#
+# Very misc
+#
+
+# Delete steam shared libraries after updating steam client
+alias steamclean='find ~/.steam/root/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" \) -print -delete'

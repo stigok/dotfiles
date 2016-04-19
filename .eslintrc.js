@@ -5,7 +5,7 @@ module.exports = {
 		ecmaVersion: 6,
 		sourceType: 'module',
 		ecmaFeatures: {
-			jsx: true,
+			jsx: false,
 			experimentalObjectRestSpread: true
 		}
 	},
@@ -14,10 +14,10 @@ module.exports = {
 		es6: true,
     mocha: true
 	},
-  globals: {
-    angular: true,
-    _: true
-  },
+  //globals: {
+  //  angular: true,
+  //  _: true
+  //},
   rules: {
     // Possible Errors
     'comma-dangle': [2, 'never'],
@@ -183,7 +183,7 @@ module.exports = {
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
     'space-unary-ops': 2,
-    'spaced-comment': [2, 'always', {markers: ['!']}],
+    //'spaced-comment': [2, '', {markers: ['!']}],
 
     // ES2015
     'arrow-parens': [2, 'as-needed'],
