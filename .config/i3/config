@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -tr +sb -fg white -tint white -sh 45
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -131,16 +131,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        #bindsym j resize shrink width 10 px or 10 ppt
+        #bindsym k resize grow height 10 px or 10 ppt
+        #bindsym l resize shrink height 10 px or 10 ppt
+        #bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 5 ppt
+        bindsym Down resize grow height 10 px or 5 ppt
+        bindsym Up resize shrink height 10 px or 5 ppt
+        bindsym Right resize grow width 10 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -155,6 +155,15 @@ bar {
         status_command i3status
 }
 
+###
+### +++
+###
 
-# Custom shit to run
-exec --no-startup-id feh --bg-scale ~/wallpaper.png
+bindsym $mod+p exec escrotum -s ~/pictures/screens/%Y-%m-%d-%H%M%S.png
+bindsym $mod+c exec chromium
+bindsym $mod+t exec thunar
+
+for_window [title="^nwapp.*"] floating enable
+for_window [title="File Manager$"] floating enable
+for_window [title="^Task Manager"] floating enable
+for_window [title="^JACK Audio Connection"] floating enable
