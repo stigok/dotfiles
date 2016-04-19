@@ -1,0 +1,10 @@
+[Unit]
+Description=Sinopia Local NPM Repository
+
+[Service]
+ExecStart=/home/noop/.nvm/versions/node/v5.10.0/bin/sinopia --config /home/noop/.config/sinopia/config.yaml
+Restart=always
+Environment=PATH=/home/noop/.nvm/versions/node/v5.10.0/bin
+
+[Install]
+WantedBy=default.target
