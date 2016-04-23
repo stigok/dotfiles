@@ -7,6 +7,7 @@ alias l='ls -AlhF --group-directories-first --color=yes'
 alias tree='tree -C --dirsfirst '
 alias pgrep='pgrep -i '
 alias psgrep='ps -aux | grep -i '
+alias cb='xclip -select clipboard -rmlastnl'
 
 # Write docs
 alias docup='atom ~/docs/arch-install.md'
