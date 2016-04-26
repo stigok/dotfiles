@@ -1,7 +1,7 @@
 #export TERM="xterm-256color"
 
-source /home/noop/antigen/antigen.zsh
-source /home/noop/.alias
+source ~/antigen/antigen.zsh
+source ~/.alias
 
 # Load the oh-my-zsh's library.
 #antigen use oh-my-zsh
