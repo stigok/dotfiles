@@ -1,0 +1,70 @@
+'.source.js':
+  'const require':
+    'prefix': 'r'
+    'body': 'const ${1:thing} = require(\'${1:thing}\');'
+  'mocha it block':
+    'prefix': 'it',
+    'body': """
+      it('${1:description}', function () {
+        ${2}
+      });
+    """
+  'mocha it done block':
+    'prefix': 'itd',
+    'body': """
+      it('${1:description}', function (done) {
+        ${2}
+      });
+    """
+  'mocha it skip block':
+    'prefix': 'its',
+    'body': """
+      it.skip('${1:description}');
+      ${2}
+    """
+  'mocha describe block':
+    'prefix': 'desc',
+    'body': """
+      describe('${1:description}', function () {
+        ${2}
+      });
+    """
+  'require underscore':
+    'prefix': 'const_',
+    'body': 'const _ = require(\'underscore\');'
+  'require promise library':
+    'prefix': 'constPromise',
+    'body': 'const Promise = require(\'bluebird\');'
+  'require assert sinon promise':
+    'prefix': 'mochatest',
+    'body': """
+      const assert = require('chai').assert;
+      const sinon = require('sinon');
+      const Promise = require('bluebird');
+      require('sinon-as-promised')(Promise);
+
+      ${1}
+    """
+  'angular controller':
+    'prefix': 'ngcontroller',
+    'body': """
+      angular.module('ngApp')
+        .${1:controller}('${2}', function ($log) {
+          ${3}
+        });
+    """
+  'for':
+    'prefix': 'for',
+    'body': """
+      for (let ${1:i} = 0; ${1} < ${2}.length; ${1}++) {
+        ${2}${3}
+      }
+    """
+'.source.shell':
+  'hashbang bin bash':
+    'prefix': 'binbash',
+    'body': """
+      #!/bin/bash
+
+      ${1}
+    """
